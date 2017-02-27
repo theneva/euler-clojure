@@ -1,4 +1,4 @@
-(defn square [n] (* n n))
+(load-file "lib/arithmetic.clj")
 
 (defn sum-up [coll] (reduce + coll))
 

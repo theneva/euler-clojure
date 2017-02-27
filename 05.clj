@@ -1,12 +1,7 @@
-(def divisors (range 11 21))
+(load-file "lib/arithmetic.clj")
 
-(defn divisible-by-all [number]
-  (do
-    (->> divisors
-         (map #(mod number %))
-         (every? #(= 0 %)))))
+(def divisors (range 11 21))
 
 (->> (range 20 Long/MAX_VALUE 20)
      (filter divisible-by-all)
      first)
-
